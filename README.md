@@ -2,7 +2,6 @@
 
 - Bu proje, **discord.js v14** kullanarak TypeScript ile yazılmış basit ve fonksiyonel bir Discord ticket sistemi botudur.  
 - Slash komut ve buton etkileşimleriyle kullanıcıların destek talepleri için ticket kanalı açıp kapatmalarını sağlar.
-- Daha fazla altyapı için [discord sunucumuz'a](https://discord.gg/DRCE9wCn4K) gelerek daha faazla altyapıya erişebilirsiniz
 
 ---
 
