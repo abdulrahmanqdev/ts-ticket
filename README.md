@@ -66,7 +66,7 @@ npm install
 
 ### Yapılandırma
 
-`src/utils/config.ts` dosyasına bot bilgilerini gir:
+`src/config.ts` dosyasına bot bilgilerini gir:
 
 ```ts
 export default {
