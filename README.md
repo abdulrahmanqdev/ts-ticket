@@ -4,8 +4,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
 </p>
 
 <p align="center">
@@ -15,8 +15,8 @@
 </p>
 
 <p align="center">
-  <strong>TypeScript ile geliştirilmiş tam tip güvenli bilet/destek sistemi.</strong><br/>
-  Görev takibi, destek talepleri ve bilet yönetimi için minimalist bir çözüm.
+  <strong>TypeScript ile geliştirilmiş Discord ticket sistemi.</strong><br/>
+  Buton tabanlı ticket açma/kapama, komut ve event handler yapısıyla tam donanımlı bot altyapısı.
 </p>
 
 </div>
@@ -25,18 +25,18 @@
 
 ## 📖 Genel Bakış
 
-**ts-ticket**, TypeScript ile sıfırdan inşa edilmiş hafif bir bilet ve görev takip sistemidir. Destek talepleri, bug raporları veya görev yönetimi için kolayca kullanılabilir.
+**ts-ticket**, TypeScript kullanılarak geliştirilmiş bir Discord ticket botudur. Kullanıcılar buton aracılığıyla destek talebi (ticket) açabilir, moderatörler ise bu talepleri yönetebilir. Modüler yapısıyla kolayca genişletilebilir.
 
 ---
 
 ## ✨ Özellikler
 
-- 🎫 Bilet oluşturma, güncelleme ve silme
-- 🏷️ Durum yönetimi (Açık / Devam Ediyor / Kapalı)
-- 🔒 Tam tip güvenliği — TypeScript ile
-- 🔍 Bilet filtreleme ve arama
-- 📱 Responsive ve modern arayüz
-- ⚡ Hızlı ve hafif yapı
+- 🎫 Buton ile ticket açma ve kapatma
+- 🔧 Slash komut desteği
+- 📡 Event handler sistemi
+- 🗂️ Modüler handler yapısı (komutlar, butonlar, eventler)
+- 🚀 Deploy komutlarını otomatik kaydet
+- 🔒 Tam TypeScript tip güvenliği
 
 ---
 
@@ -45,21 +45,48 @@
 | Teknoloji | Amaç |
 |---|---|
 | TypeScript | Dil |
-| Next.js | Framework |
-| Tailwind CSS | Stillendirme |
+| Discord.js | Discord API Kütüphanesi |
+| Node.js | Çalışma Ortamı |
 
 ---
 
 ## 🚀 Başlarken
 
+### Gereksinimler
+- Node.js `>= 18.x`
+- [Discord Developer Portal](https://discord.com/developers/applications) üzerinden bir bot token'ı
+
+### Kurulum
+
 ```bash
 git clone https://github.com/abdulrahmanqdev/ts-ticket.git
 cd ts-ticket
 npm install
-npm run dev
 ```
 
-Tarayıcında [http://localhost:3000](http://localhost:3000) adresini aç.
+### Yapılandırma
+
+`src/utils/config.ts` dosyasına bot bilgilerini gir:
+
+```ts
+export default {
+  token: "BOT_TOKEN_BURAYA",
+  clientId: "CLIENT_ID_BURAYA",
+  guildId: "GUILD_ID_BURAYA",
+}
+```
+
+### Slash Komutlarını Deploy Et
+
+```bash
+npx ts-node src/utils/deployCommands.ts
+```
+
+### Çalıştır
+
+```bash
+npx ts-node src/utils/index.ts
+```
 
 ---
 
@@ -68,11 +95,25 @@ Tarayıcında [http://localhost:3000](http://localhost:3000) adresini aç.
 ```
 ts-ticket/
 ├── src/
-│   ├── app/            # Next.js sayfaları
-│   ├── components/     # UI bileşenleri
-│   └── types/          # TypeScript tip tanımları
+│   ├── buttons/
+│   │   ├── closeTicket.ts       # Ticket kapatma butonu
+│   │   └── createTicket.ts      # Ticket oluşturma butonu
+│   ├── commands/
+│   │   └── ticket.ts            # Ticket slash komutu
+│   ├── events/
+│   │   ├── interactionCreate.ts # Etkileşim olayı
+│   │   └── ready.ts             # Bot hazır olayı
+│   ├── handlers/
+│   │   ├── loadButtons.ts       # Buton yükleyici
+│   │   ├── loadCommands.ts      # Komut yükleyici
+│   │   └── loadEvents.ts        # Event yükleyici
+│   └── utils/
+│       ├── deployCommands.ts    # Slash komut deploy
+│       ├── config.ts            # Bot yapılandırması
+│       └── index.ts             # Ana giriş noktası
 ├── tsconfig.json
-└── package.json
+├── package.json
+└── LICENSE
 ```
 
 ---
@@ -80,11 +121,20 @@ ts-ticket/
 ## 🤝 Katkıda Bulunma
 
 1. Repoyu fork'la
-2. Yeni dal oluştur
+2. Yeni dal oluştur (`git checkout -b ozellik/yeni-ozellik`)
 3. Değişiklikleri kaydet ve Pull Request aç
 
 ---
 
-## 👤 Geliştirici
+## 📄 Lisans
 
-**@abdulrahmanqdev**
+[GPL-3.0 Lisansı](LICENSE) kapsamında açık kaynaklıdır.
+
+---
+
+<div align="center">
+  <p>Faydalı bulduysan ⭐ vermeyi unutma!</p>
+  <a href="https://github.com/abdulrahmanqdev">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</div>
