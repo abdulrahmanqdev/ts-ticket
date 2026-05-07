@@ -1,30 +1,90 @@
-# Discord Ticket Sistemi Botu (TypeScript - discord.js v14)
+<div align="center">
 
-- Bu proje, **discord.js v14** kullanarak TypeScript ile yazılmış basit ve fonksiyonel bir Discord ticket sistemi botudur.  
-- Slash komut ve buton etkileşimleriyle kullanıcıların destek talepleri için ticket kanalı açıp kapatmalarını sağlar.
+# 🎫 ts-ticket
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+</p>
 
-## 🚀 Özellikler
+<p align="center">
+  <img src="https://img.shields.io/github/stars/abdulrahmanqdev/ts-ticket?style=flat-square&color=yellow"/>
+  <img src="https://img.shields.io/github/forks/abdulrahmanqdev/ts-ticket?style=flat-square&color=green"/>
+  <img src="https://img.shields.io/github/last-commit/abdulrahmanqdev/ts-ticket?style=flat-square&color=orange"/>
+</p>
 
-- `/ticket` komutu ile ticket oluşturma paneli gönderme  
-- Buton ile yeni ticket kanalı oluşturma  
-- Ticket kanalı yalnızca kullanıcı ve destek ekibi tarafından görülebilir  
-- Ticket kapatma butonu ile ticket kanalını 5 saniye sonra kapatma  
-- Komut, event ve button handler'ları ayrı dosyalarda modüler yapı  
-- TypeScript ile tip güvenliği  
-- `config.ts` dosyasıyla kolay yapılandırma  
+<p align="center">
+  <strong>TypeScript ile geliştirilmiş tam tip güvenli bilet/destek sistemi.</strong><br/>
+  Görev takibi, destek talepleri ve bilet yönetimi için minimalist bir çözüm.
+</p>
 
----
-
-## 📦 Kurulum
-
-1. projeyi indirin ve editör programında açın.
-2. src/config.ts dosyasına girin ve bilgileri doldurun.
-3. terminal'i açın ve `npm install` yazın.
-4. slash komutlarını `npx ts-node src/utils/deployCommands.ts` şu şekilde sunucuya yükleyin
-5. işte bu kadar `npm run dev` veya `ts-node src/index.ts` yazarak projenizi açabilirsiniz.
+</div>
 
 ---
 
-slow3rxq tarafından ❤️ ile yapıldı
+## 📖 Genel Bakış
+
+**ts-ticket**, TypeScript ile sıfırdan inşa edilmiş hafif bir bilet ve görev takip sistemidir. Destek talepleri, bug raporları veya görev yönetimi için kolayca kullanılabilir.
+
+---
+
+## ✨ Özellikler
+
+- 🎫 Bilet oluşturma, güncelleme ve silme
+- 🏷️ Durum yönetimi (Açık / Devam Ediyor / Kapalı)
+- 🔒 Tam tip güvenliği — TypeScript ile
+- 🔍 Bilet filtreleme ve arama
+- 📱 Responsive ve modern arayüz
+- ⚡ Hızlı ve hafif yapı
+
+---
+
+## 🛠️ Teknoloji Yığını
+
+| Teknoloji | Amaç |
+|---|---|
+| TypeScript | Dil |
+| Next.js | Framework |
+| Tailwind CSS | Stillendirme |
+
+---
+
+## 🚀 Başlarken
+
+```bash
+git clone https://github.com/abdulrahmanqdev/ts-ticket.git
+cd ts-ticket
+npm install
+npm run dev
+```
+
+Tarayıcında [http://localhost:3000](http://localhost:3000) adresini aç.
+
+---
+
+## 📁 Proje Yapısı
+
+```
+ts-ticket/
+├── src/
+│   ├── app/            # Next.js sayfaları
+│   ├── components/     # UI bileşenleri
+│   └── types/          # TypeScript tip tanımları
+├── tsconfig.json
+└── package.json
+```
+
+---
+
+## 🤝 Katkıda Bulunma
+
+1. Repoyu fork'la
+2. Yeni dal oluştur
+3. Değişiklikleri kaydet ve Pull Request aç
+
+---
+
+## 👤 Geliştirici
+
+**@abdulrahmanqdev**
